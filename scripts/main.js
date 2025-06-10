@@ -133,6 +133,13 @@ btnSend.addEventListener('click', (e)=>{
 btnSendMod.addEventListener('click', (e)=> {
     e.preventDefault();
     if (inputWeightMod.value) {
+        localStorage.setItem('userWeight', inputWeightMod.value)
+        displayBmi(
+            localStorage.getItem('userName'),
+            localStorage.getItem('userAge'),
+            localStorage.getItem('userWeight'),
+            localStorage.getItem('userHeight')
+        );
         data.push(inputWeightMod.value);
         chart.update();
         inputWeightMod.value = "";
