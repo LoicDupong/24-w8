@@ -112,10 +112,6 @@ function init() {
 }
 init();
 
-function reset() {
-    local("","","","","")
-}
-
 
 btnSend.addEventListener('click', (e)=>{
     e.preventDefault();
@@ -147,5 +143,5 @@ btnSendMod.addEventListener('click', (e)=> {
 })
 
 btnReset.addEventListener('click', (e)=>{
-    reset();
+     localStorage.clear()
 })
